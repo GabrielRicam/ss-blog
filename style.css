@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+
+body{ 
+    margin: 0;
+    padding: 0;
+    background-color: #1C1C1C;
+    font-family: 'inter';
+    width: 100%;
+    min-height: 100vh;
+    background: url(media/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.topbar{
+    /* visibility: hidden; */
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    border-bottom: 2px solid white;
+    overflow: hidden;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    margin: 0;
+    background-color: #1C1C1C;
+    transition: all 1s ease-in-out;
+}
+.topbar.tb-scrolled{
+    background-color: rgba(28, 28, 28, 0.8);
+    padding: 1em;
+}
+.topbar-list{
+    float: left;
+    
+}
+.topbar-content{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 4vw;
+
+}
+
+.tbl-link{
+    display: flex;
+    justify-content: center;
+}
+
+/* Menubar   */
+
+.menubar{
+    position: absolute;
+    top: 1.3em;
+    left: 6.5em;
+    transition: top 1s ease-in-out;
+}
+.mb-scrolled{
+    top: 0.8em;
+}
+.menu-bar{
+    background-color: white;
+    transform: translate(-3em);
+    width: 40px;
+    height: 2px;
+    margin-top: 6px;
+}
+.bar1{
+    margin-top: 11px;
+}
+
+/* Section 1 */
+
+section{
+    padding: 10vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.section-home .home-description{
+    color: white;
+    width: 50%;
+    padding: -50em;
+}
+.section-home button{
+    font-size: 1vw;
+    background-color: rgba(211, 211, 211, 0.1);
+    border: 2px solid white;
+    padding: 2vh 2vw;
+    text-decoration: none;
+    margin-top: 6vh;
+}
+.home-logo{
+    text-align: center;
+    transform: translateY(5vh);
+    font-size: 0.7vw;
+    width: 50%;
+}
+.home-logo a{
+    text-decoration: none;
+    color: white;
+}
