@@ -6,40 +6,71 @@
     <title>Homepage</title>
     <link href="style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 </head>
 <body>
     <nav>
+        <div class="menubar" onclick="sidebarOn()">
+            <div class="menu-bar bar1"></div>
+            <div class="menu-bar bar2"></div>
+            <div class="menu-bar bar3"></div>
+        </div>
         <ul class="topbar">
             <li class="topbar-list">
-                <div class="menubar">
-                    <div class="menu-bar bar1"></div>
-                    <div class="menu-bar bar2"></div>
-                    <div class="menu-bar bar3"></div>
-                </div>
+                <a class="topbar-content tb-home" href="#home">Home</a>
             </li>
             <li class="topbar-list tbl-link">
-                <a class="topbar-content tb-home" href="#section1">Home</a>
+                <a class="topbar-content tb-link" href="#about">Tentang Saya</a>
             </li>
             <li class="topbar-list tbl-link">
-                <a class="topbar-content" href="#">Tentang Saya</a>
-            </li>
-            <li class="topbar-list tbl-link">
-                <a class="topbar-content" href="#">Blog</a>
+                <a class="topbar-content tb-blog" href="#blog">Blog</a>
             </li> 
             <li class="topbar-list tbl-link">
-                <a class="topbar-content" href="#">Afilasi</a>
+                <a class="topbar-content tb-af" href="#afilasi">Afilasi</a>
             </li>
         </ul>
     </nav>
-    <section class="section-home" id="section1">
-        <div class="home-description">
-            <h1 style="font-family: 'ms gothic'; font-size: 5vw;">SELAMAT DATANG DI BLOG SAYA!</h1>
-            <p style="font-size: 1.3vw;">Nama saya Gabriel Wiranata Ricam dari Jurusan Informatika</p>
-            <button type="button" style="color: white;">Selengkapnya</button>
+
+
+    <div class="sidebar-dim" onclick="sidebarOff()"></div>
+
+    <div class="sidebar">
+        <div class="side-content">
+            <div class="title-side">
+                <div class="topbar-close" onclick="sidebarOff()">
+                    <div class="close-bar cb1"></div>
+                    <div class="close-bar cb2"></div>
+                </div>
+                <h2 style="font-size: 2rem;">Menu</h2>
+            </div>
+            <ul onclick="sidebarOff()">
+                <li class="side-desc side-home">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="side-desc side-about">
+                    <a href="#about">Tentang Saya</a>
+                </li>
+                <li class="side-desc side-blog">
+                    <a>Blog
+                        <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                </li>
+                <li class="side-desc side-af">
+                    <a href="#afilasi">Afilasi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section-home" id="home">
+        <div class="description">
+            <h1>SELAMAT DATANG DI BLOG SAYA!</h1>
+            <p>Nama saya Gabriel Wiranata Ricam dari Jurusan Informatika</p>
+            <a class="buttonhome" href="#about" id="buttonhome" style="color: white;">Selengkapnya</a>
         </div>
         <div class="home-logo">
-            <a href="https://gunadarma.ac.id/">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣠⠶⢞⠷⢶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            <a href="https://gunadarma.ac.id/" target="_blank">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣠⠶⢞⠷⢶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⠶⢛⠫⠑⠂⠉⠀⠈⠁⠒⠩⢙⡻⢶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡾⣛⠍⠂⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠊⢝⡻⢦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⠾⡫⠑⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠐⠩⣛⢷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -78,12 +109,63 @@
             </a>
         </div>
     </section>
-    <section class="section-home1">
-        <h1>SELAMAT DATANG DI BLOG SAYA!</h1>
+
+
+
+    <section class="section-about" id="about">
+        <div class="description">
+            <h1>Tentang Saya</h1>
+            <p>Nama saya Gabriel Wiranata Ricam, biasanya dipanggil Gabriel. Saya merupakan mahasiswa semester 1 Jurusan Informatika Universitas Gunadarma region Kalimalang angkatan tahun 2023. </p>
+            <br><a class="bi bi-instagram" href="https://www.instagram.com/gabrielwiranata/" target="_blank" style="font-size: 1.5vw;"> @gabrielwiranata</a>
+        </div>
+        <div class="about-logo">
+            <svg width="30vw" height="30vw">
+                <circle cx="15vw" cy="15vw" r="13vw"fill="white" />
+            </svg>
+            <img src="https://cdn.discordapp.com/attachments/899598418014502936/1162695358980300901/hand.png?ex=653cdf6f&is=652a6a6f&hm=af0a555e34718c207d5c42f4e27109d4fc2be22fb53a6efbf4d95a23f73d6e6b&">
+        </div>
     </section>
 
+
+
+    <section class="section-blog" id="blog">
+        <div class="description">
+            <h1>Postingan Blog</h1>
+            <h2>Terbaru <span style="font-size: small;">(Click for More)</span></h2>
+            <div class="blog-post bp1">
+                <h2>Lorem Ipsum</h2>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+            </div>
+            <div class="blog-post bp2">
+                <h2>Lorem Ipsum</h2>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+            </div>
+            <a class="btn-blog">
+                Selengkapnya
+                <i class="bi bi-box-arrow-up-right"></i>
+            </a>
+        </div>
+    </section>
+
+
+
+    <section class="section-afilasi" id="afilasi">
+        <div class="description">
+            <h1 style="text-align: center;">Afilasi</h1>
+            <div class="link-logo">
+                <a href="https://studentsite.gunadarma.ac.id/" target="_blank">
+                    <img src="/media/studensite.png" class="ssite" style="width: 20vw;">
+                </a>
+                <a href="https://gunadarma.ac.id/" target="_blank">
+                    <img src="/media/gunadarma.png" class="gundar" style="width: 20vh;">
+                </a>
+                <a href="http://baak.gunadarma.ac.id/" target="_blank">
+                    <img src="/media/baak.png" class="baak" style="width: 20vw;">
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 <script src="javascript.js">
-
 </script> 
 </html>

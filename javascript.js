@@ -19,3 +19,12 @@ document.addEventListener('scroll', () => {
     }
 
 })
+
+function sidebarOn(){
+    document.querySelector('.sidebar').classList.add('sidebar-open');
+    document.querySelector('.sidebar-dim').classList.add('sd-enabled');
+}
+function sidebarOff(){
+    document.querySelector('.sidebar').classList.remove('sidebar-open');
+    document.querySelector('.sidebar-dim').classList.remove('sd-enabled');
+}
