@@ -1,0 +1,73 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'inter';
+    color: white;
+    background-image: url(/media/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blog-body{
+    width: 100%;
+    height: 100%;
+}
+/* Topbar */
+
+.topbar{
+    display: flex;
+    align-items: center;
+    padding: 4vh 4vw;
+
+}
+.topbar h1{
+    margin: 0 3vw;
+    font-weight: 600;
+}
+.topbar a{
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* Content */
+.none{
+    display: grid;
+    position: relative;
+    top: 10vh;
+    place-items: center;
+}
+.content{
+    margin: 10vh 10vw;
+}
+.blog-post{
+    margin: 10vh 7vw;
+    padding: 1vh 5vw;
+    border-left:2px solid white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.blog-post-hide{
+    transform: translateX(-50px);
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+}
+.blog-post-show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+.blog-post i{
+    color: gray;
+}
+.blog-post:hover{
+    background-color: white;
+    border-radius:50px;
+    color: #1c1c1c;
+}
