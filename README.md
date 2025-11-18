@@ -1,1 +1,2 @@
 # ss-blog
+Abandoned (kinda)
